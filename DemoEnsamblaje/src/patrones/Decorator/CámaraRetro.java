@@ -6,15 +6,17 @@
 
 package patrones.Decorator;
 
+import patrones.Vehiculo;
+
 /**
  *
  * @author eli
  */
 public class CámaraRetro extends VehiculoDecorator{
     String marca;
-    
-    public CámaraRetro(String marca){
-        this.marca=marca;
+
+    public CámaraRetro(Vehiculo vehiculo) {
+        super(vehiculo);
     }
 
     @Override

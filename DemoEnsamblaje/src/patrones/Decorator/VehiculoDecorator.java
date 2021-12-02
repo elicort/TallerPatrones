@@ -14,13 +14,15 @@ import patrones.Vehiculo;
  * @author eli
  */
 public class VehiculoDecorator implements Vehiculo{
-
-    VehiculoDecorator(){
-        
+    
+    protected Vehiculo vehiculo;
+    
+    VehiculoDecorator(Vehiculo vehiculo){
+        this.vehiculo=vehiculo;
     }
     @Override
     public void ensamblar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.vehiculo.ensamblar();
     }
 
     

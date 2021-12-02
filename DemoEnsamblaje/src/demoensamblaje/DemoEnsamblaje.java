@@ -7,6 +7,9 @@ package demoensamblaje;
 
 import patrones.Builder.MotorDiesel;
 import patrones.Builder.*;
+import patrones.Decorator.Radio;
+import patrones.Decorator.SistemaSensores;
+import patrones.Vehiculo;
 
 
 /**
@@ -19,7 +22,11 @@ public class DemoEnsamblaje {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Definir vehiculo
+        
+        CarDirector director_1 = new CarDirector(new Xsara());
+        director_1.crearVehiculo("negro", false);// pasa color y agg extra
+        
+        /*//Definir vehiculo
         VehiculoBase v1 = new VehiculoBase();
         v1.marca = "Citroen";
         v1.modelo = "Xsara Picasso";
@@ -37,13 +44,15 @@ public class DemoEnsamblaje {
         
         //Construir extras
         v1.direccionAsistida = false;
-        
+        */
         //Mostrar prestaciones del vehiculo
         System.out.println(v1.getPrestaciones());
 
 
         //--------------------------------------------------
-        //Definir vehiculo
+        CarDirector director_2 = new CarDirector(new A3Sport());
+        director_2.crearVehiculo("plata cromado", true);
+        /*//Definir vehiculo
         VehiculoBase v2 = new VehiculoBase();
         v2.marca = "Audi";
         v2.modelo = "A3 Sportback";
@@ -61,7 +70,7 @@ public class DemoEnsamblaje {
         
         //Construir extras
         v2.direccionAsistida = true;
-        
+        */
         //Mostrar prestaciones del vehiculo
         System.out.println(v2.getPrestaciones());
         
@@ -71,8 +80,12 @@ public class DemoEnsamblaje {
         //Debería agregar estos accesorios como parte de las prestaciones del vehiculo
                 
         //Mostrar prestaciones actualizadas del vehiculo
-        
-        //--------------------------------------------------
+        Vehiculo v = new Radio(v1);
+        v.ensamblar();
+        v = new SistemaSensores(v1);
+        v.ensamblar();
+
+//--------------------------------------------------
         
         //TODO: Agregar accesorios: camara de retro a v2
         //Debería agregar estos accesorios como parte de las prestaciones del vehiculo

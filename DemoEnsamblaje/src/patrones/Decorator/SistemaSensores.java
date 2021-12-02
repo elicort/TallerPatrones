@@ -6,6 +6,8 @@
 
 package patrones.Decorator;
 
+import patrones.Vehiculo;
+
 /**
  *
  * @author eli
@@ -14,8 +16,13 @@ public class SistemaSensores extends VehiculoDecorator{
 
     String nombre;
     
-    public SistemaSensores(String nombre){
-        this.nombre = nombre;
+    public SistemaSensores(Vehiculo vehiculo){
+        super(vehiculo);
     }
     
+    @Override
+    public void ensamblar() {
+        this.vehiculo.ensamblar();
+    }
+
 }

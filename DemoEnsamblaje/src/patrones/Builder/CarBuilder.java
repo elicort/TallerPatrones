@@ -14,7 +14,10 @@ public abstract class CarBuilder {
     
     protected VehiculoBase vehiculo;
     
-    abstract void armarCarroceria();
+    
+    abstract void armarCarroceria(String color);
     abstract void montarMotor();
+    abstract void definirVehiculo();
+    abstract void construirExtras(boolean booleano);
 
 }

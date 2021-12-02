@@ -12,4 +12,18 @@ package patrones.Builder;
  */
 public class CarDirector {
 
+    private CarBuilder builder;
+    
+    public CarDirector(CarBuilder builder){
+        this.builder=builder;
+    }
+    
+    public void crearVehiculo(String color, boolean extra){
+        builder.armarCarroceria(color);
+        builder.montarMotor();
+        builder.definirVehiculo();
+        builder.construirExtras(extra);
+    }
+    
+    
 }

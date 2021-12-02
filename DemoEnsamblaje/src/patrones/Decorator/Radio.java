@@ -6,11 +6,19 @@
 
 package patrones.Decorator;
 
+import patrones.Vehiculo;
+
 /**
  *
  * @author eli
  */
 public class Radio extends VehiculoDecorator{
+
+    public Radio(Vehiculo vehiculo) {
+        super(vehiculo);
+    }
+    
+    
     @Override
         public void ensamblar() {
             super.ensamblar(); 

@@ -32,7 +32,7 @@ public class VehiculoBase implements Vehiculo{
        n1 += (direccionAsistida ? "Con ":"Sin ") + "dirección asistida" + "\n";
        n1 += "Carrocería de " + tipoCarroceria.material + "\n";
        n1 += "Respuesta del motor: " + motor.InyectarCombustible(100) + "\n";
-       
+       n1 += ""
        return n1;
    }
 
