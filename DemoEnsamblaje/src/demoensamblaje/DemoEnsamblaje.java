@@ -5,7 +5,9 @@
  */
 package demoensamblaje;
 
-import sinpatron.*;
+import patrones.Builder.MotorDiesel;
+import patrones.Builder.*;
+
 
 /**
  *
@@ -18,7 +20,7 @@ public class DemoEnsamblaje {
      */
     public static void main(String[] args) {
         //Definir vehiculo
-        Vehiculo v1 = new Vehiculo();
+        VehiculoBase v1 = new VehiculoBase();
         v1.marca = "Citroen";
         v1.modelo = "Xsara Picasso";
         
@@ -42,7 +44,7 @@ public class DemoEnsamblaje {
 
         //--------------------------------------------------
         //Definir vehiculo
-        Vehiculo v2 = new Vehiculo();
+        VehiculoBase v2 = new VehiculoBase();
         v2.marca = "Audi";
         v2.modelo = "A3 Sportback";
         

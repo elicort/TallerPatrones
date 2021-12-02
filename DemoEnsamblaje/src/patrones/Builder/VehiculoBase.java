@@ -3,19 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sinpatron;
+
+package patrones.Builder;
+
+import patrones.Vehiculo;
 
 /**
  *
- * @author david_000
+ * @author eli
  */
-public class Vehiculo {
+public class VehiculoBase implements Vehiculo{
    public String color;
    public boolean direccionAsistida;
    public String marca;
    public String modelo;
    public IMotor motor;
    public Carroceria tipoCarroceria;
+   
+   public VehiculoBase(){
+       
+   }
    
    public String getPrestaciones(){
        String n1 = "Prestaciones:\n";
@@ -28,5 +35,11 @@ public class Vehiculo {
        
        return n1;
    }
+
+    @Override
+    public void ensamblar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
+
